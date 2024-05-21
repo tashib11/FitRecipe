@@ -2,6 +2,7 @@ package com.example.fitrecipe;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,7 @@ public class RecipeActivity extends AppCompatActivity {
     private TextView mRecipeIngredients;
     private TextView mRecipeMethodTitle;
     private TextView mRecipe;
+    private ImageView mRecipeThumbnail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +25,20 @@ public class RecipeActivity extends AppCompatActivity {
         mRecipeMethodTitle = findViewById(R.id.method);
         mRecipe = findViewById(R.id.recipe);
 
-        Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
-        if (extras != null) {
-            String Title = extras.getString("RecipeName");
-            String Ingredients = extras.getString("RecipeIngredients");
-            String MethodTitle = extras.getString("RecipeMethodTitle");
-            String Recipe = extras.getString("Recipe");
 
-            mRecipeName.setText(Title);
-            mRecipeIngredients.setText(Ingredients);
-            mRecipeMethodTitle.setText(MethodTitle);
-            mRecipe.setText(Recipe);
+        Intent intent = getIntent();
+        if (intent != null) {
+            String title = intent.getStringExtra("RecipeName");
+            String ingredients = intent.getStringExtra("RecipeIngredients");
+            String methodTitle = intent.getStringExtra("RecipeMethodTitle");
+            String recipe = intent.getStringExtra("Recipe");
+
+
+            mRecipeName.setText(title);
+            mRecipeIngredients.setText(ingredients);
+            mRecipeMethodTitle.setText(methodTitle);
+            mRecipe.setText(recipe);
+
         }
     }
 }
