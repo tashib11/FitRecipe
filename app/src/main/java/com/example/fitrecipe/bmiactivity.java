@@ -103,13 +103,13 @@ public class bmiactivity extends AppCompatActivity {
         mgender.setText(intent.getStringExtra("gender"));
         mbmidisplay.setText(mbmi);
 
-//        mSaveBmi.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Use the username retrieved from LoginActivity
-//                saveToFirebase(username);
-//            }
-//        });
+        mSaveBmi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Use the username retrieved from LoginActivity
+                saveToFirebase(username);
+            }
+        });
 
         mgotomain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,22 +118,22 @@ public class bmiactivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-    }}
+    }
 
-//    private void saveToFirebase(String username) {
-//        if (username != null) {
-//            try {
-//                DatabaseReference userReference = FirebaseDatabase.getInstance().getReference().child("users").child(username);
-//                DatabaseReference bmiInfoReference = userReference.child("bmi_info").push();
-//                BMIRecord bmiRecord = new BMIRecord(mbmi, age, weight, gender);
-//                bmiInfoReference.setValue(bmiRecord);
-//
-//                Toast.makeText(bmiactivity.this, "BMI result saved successfully", Toast.LENGTH_SHORT).show();
-//            } catch (Exception e) {
-//                Log.v("log", String.valueOf(e));
-//            }
-//        } else {
-//            Toast.makeText(bmiactivity.this, "Username not defined", Toast.LENGTH_SHORT).show();
-//        }
-//    }
-//}
+    private void saveToFirebase(String username) {
+        if (username != null) {
+            try {
+                DatabaseReference userReference = FirebaseDatabase.getInstance().getReference().child("users").child(username);
+                DatabaseReference bmiInfoReference = userReference.child("bmi_info").push();
+                BMIRecord bmiRecord = new BMIRecord(mbmi, age, weight, gender);
+                bmiInfoReference.setValue(bmiRecord);
+
+                Toast.makeText(bmiactivity.this, "BMI result saved successfully", Toast.LENGTH_SHORT).show();
+            } catch (Exception e) {
+                Log.v("log", String.valueOf(e));
+            }
+        } else {
+            Toast.makeText(bmiactivity.this, "Username not defined", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
