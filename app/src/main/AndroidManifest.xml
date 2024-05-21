@@ -1,10 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Permissions -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- Application -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,36 +14,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BMICalculator"
         tools:targetApi="31">
-
+        <activity
+            android:name=".bmiactivity"
+            android:exported="false" />
         <!-- Activities -->
-<!--        <activity android:name=".HealthArticles" android:exported="false"/>-->
-<!--        <activity android:name=".NewsSplashActivity" android:exported="false"/>-->
-<!--        <activity android:name=".NewsRecyclerAdapter" android:exported="false"/>-->
-<!--        <activity android:name=".NewsMainActivity" android:exported="false"/>-->
-<!--        <activity android:name=".NewsFullActivity" android:exported="false"/>-->
-<!--        <activity android:name=".AgeCalculate" android:exported="false"/>-->
-<!--        <activity android:name=".History" android:exported="false"/>-->
-<!--        <activity android:name=".Settings" android:exported="false"/>-->
-<!--        <activity android:name=".HeightConverter" android:exported="false"/>-->
-<!--        <activity android:name=".HealthArticle" android:exported="false"/>-->
-<!--        <activity android:name=".ArticleActivity" android:exported="false"/>-->
-<!--        <activity android:name=".splash" android:exported="false"/>-->
-<!--        <activity android:name=".bmiactivity" android:exported="false"/>-->
-
+        <!-- <activity android:name=".HealthArticles" android:exported="false"/> -->
+        <!-- <activity android:name=".NewsSplashActivity" android:exported="false"/> -->
+        <!-- <activity android:name=".NewsRecyclerAdapter" android:exported="false"/> -->
+        <!-- <activity android:name=".NewsMainActivity" android:exported="false"/> -->
+        <!-- <activity android:name=".NewsFullActivity" android:exported="false"/> -->
+        <!-- <activity android:name=".AgeCalculate" android:exported="false"/> -->
+        <!-- <activity android:name=".History" android:exported="false"/> -->
+        <!-- <activity android:name=".Settings" android:exported="false"/> -->
+        <!-- <activity android:name=".HeightConverter" android:exported="false"/> -->
+        <!-- <activity android:name=".HealthArticle" android:exported="false"/> -->
+        <!-- <activity android:name=".ArticleActivity" android:exported="false"/> -->
+        <!-- <activity android:name=".splash" android:exported="false"/> -->
+         <activity android:name=".bmiactivity" android:exported="false"/>
         <!-- Login Activity -->
-        <activity android:name=".LoginActivity" android:exported="true">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Signup Activity -->
-        <activity android:name=".SignupActivity" android:exported="false"/>
-
-        <!-- Main Activity -->
-        <activity android:name=".MainActivity" android:exported="false"/>
-
+        </activity> <!-- Signup Activity -->
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" /> <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
