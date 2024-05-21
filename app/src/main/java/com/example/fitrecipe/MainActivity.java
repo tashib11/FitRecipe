@@ -202,18 +202,18 @@ public class MainActivity extends AppCompatActivity {
                 {
                     Toast.makeText(getApplicationContext(),"Weight Is Incorrect",Toast.LENGTH_SHORT).show();
                 }
-//                else {
-//
-//                    Intent intent = new Intent(MainActivity.this, bmiactivity.class);
-//                    intent.putExtra("gender", typerofuser);
-//                    intent.putExtra("height", mintprogress);
-//                    intent.putExtra("weight", weight2);
-//                    intent.putExtra("age", age2);
-//                    intent.putExtra("username", username);
-//                    //Toast.makeText(MainActivity.this, username, Toast.LENGTH_SHORT).show();
-//                    startActivity(intent);
-//
-//                }
+                else {
+
+                    Intent intent = new Intent(MainActivity.this, bmiactivity.class);
+                    intent.putExtra("gender", typerofuser);
+                    intent.putExtra("height", mintprogress);
+                    intent.putExtra("weight", weight2);
+                    intent.putExtra("age", age2);
+                    intent.putExtra("username", username);
+                    //Toast.makeText(MainActivity.this, username, Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
+
+                }
 
 
             }
