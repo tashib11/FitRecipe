@@ -55,18 +55,18 @@ public class MainActivity extends AppCompatActivity {
         mmale=findViewById(R.id.male);
         mfemale=findViewById(R.id.female);
 
-//        mhistorybutton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String username = getIntent().getStringExtra("username");
-//
-//                Log.d("MainActivity", "Username passed to History: " + username);
-//                Intent intent = new Intent(MainActivity.this, History.class);
-//                intent.putExtra("username", username);
-//                startActivity(intent);
-//
-//            }
-//        });
+        mhistorybutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String username = getIntent().getStringExtra("username");
+
+                Log.d("MainActivity", "Username passed to History: " + username);
+                Intent intent = new Intent(MainActivity.this, History.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
+
+            }
+        });
 
 //        marticlebutton.setOnClickListener(new View.OnClickListener() {
 //            @Override
