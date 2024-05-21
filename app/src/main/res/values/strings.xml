@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BMI Calculator</string>
+    <string name="app_name">FitRecipe</string>
 
     <string-array name="unit_array">
         <item>Meters</item>

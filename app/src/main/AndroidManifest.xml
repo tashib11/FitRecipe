@@ -13,20 +13,18 @@
         android:theme="@style/Theme.FitRecipe"
         tools:targetApi="31">
         <activity
-            android:name=".Age"
+            android:name=".HeightConverter"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false">
+            android:name=".AgeCalculate"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
+
     </application>
 
 </manifest>
