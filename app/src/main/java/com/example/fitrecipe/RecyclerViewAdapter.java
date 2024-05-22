@@ -53,6 +53,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return mData.size();
     }
 
+    public void setRecipes(List<Recipes> recipes) {
+        this.mData = recipes;
+        notifyDataSetChanged();
+    }
+
+    public List<Recipes> getRecipes() {
+        return mData;
+    }
+
     public class MyHolder extends RecyclerView.ViewHolder {
         TextView recipeTitle;
         CardView cardView;
