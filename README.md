@@ -28,7 +28,7 @@ FitRecipe is an Android application designed to help users discover and prepare 
 
 1. Clone the repository:
     ```bash
-    git clonehttps://github.com/tashib11/FitRecipe.git
+    git clone https://github.com/tashib11/FitRecipe.git
     ```
 2. Open the project in Android Studio.
 
