@@ -84,13 +84,13 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
-//        msettingsbutton .setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent=new Intent(MainActivity.this,Settings.class);
-//                startActivity(intent);
-//            }
-//        });
+        msettingsbutton .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity2.this,settings.class);
+                startActivity(intent);
+            }
+        });
 
 
 
