@@ -31,19 +31,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MyHolder myHolder, final int i) {
-        myHolder.recipeTitle.setText(mData.get(i).getRecipeName());
-        myHolder.img_recipe_thumbnail.setImageResource(mData.get(i).getThumbnail());
+    public void onBindViewHolder(@NonNull final MyHolder myHolder, int position) {
+        myHolder.recipeTitle.setText(mData.get(position).getRecipeName());
+        myHolder.img_recipe_thumbnail.setImageResource(mData.get(position).getThumbnail());
         myHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, RecipeActivity.class);
-                intent.putExtra("RecipeName", mData.get(i).getRecipeName());
-                intent.putExtra("RecipeIngredients", mData.get(i).getRecipeIngredients());
-                intent.putExtra("RecipeMethodTitle", mData.get(i).getRecipeMethodTitle());
-                intent.putExtra("Recipe", mData.get(i).getRecipe());
-                intent.putExtra("Thumbnail", mData.get(i).getThumbnail());
-                mContext.startActivity(intent);
+                int adapterPosition = myHolder.getAdapterPosition();
+                if (adapterPosition != RecyclerView.NO_POSITION) {
+                    Intent intent = new Intent(mContext, RecipeActivity.class);
+                    intent.putExtra("RecipeName", mData.get(adapterPosition).getRecipeName());
+                    intent.putExtra("RecipeIngredients", mData.get(adapterPosition).getRecipeIngredients());
+                    intent.putExtra("RecipeMethodTitle", mData.get(adapterPosition).getRecipeMethodTitle());
+                    intent.putExtra("Recipe", mData.get(adapterPosition).getRecipe());
+                    intent.putExtra("Thumbnail", mData.get(adapterPosition).getThumbnail());
+                    mContext.startActivity(intent);
+                }
             }
         });
     }
@@ -62,7 +65,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return mData;
     }
 
-    public class MyHolder extends RecyclerView.ViewHolder {
+    public static class MyHolder extends RecyclerView.ViewHolder {
         TextView recipeTitle;
         CardView cardView;
         ImageView img_recipe_thumbnail;
