@@ -23,8 +23,8 @@ public class settings extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate to AgeCalculate page
-                //Intent intent = new Intent(Settings.this, AgeCalculate.class);
-              //  startActivity(intent);
+                Intent intent = new Intent(settings.this, AgeCalculate.class);
+                startActivity(intent);
             }
         });
 
@@ -32,8 +32,8 @@ public class settings extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate to HeightConverter page
-                //Intent intent = new Intent(Settings.this, HeightConverter.class);
-                //startActivity(intent);
+                Intent intent = new Intent(settings.this, HeightConverter.class);
+                startActivity(intent);
             }
         });
 
