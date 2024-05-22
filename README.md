@@ -32,7 +32,7 @@ FitRecipe is an Android application designed to help users discover and prepare 
     ```
 2. Open the project in Android Studio.
 
-   ## References
+   ## Contributions
    - https://github.com/tashib11
    - https://github.com/tamim2007009
    - https://github.com/Mezba1312
