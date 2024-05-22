@@ -127,7 +127,7 @@ public class LoginActivity extends AppCompatActivity {
                         String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
 
                         // Navigate to MainActivity after successful login
-                        Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent mainIntent = new Intent(LoginActivity.this, MainActivity2.class);
                         mainIntent.putExtra("username", usernameFromDB);
                         new Handler().postDelayed(new Runnable() {
                             @Override

@@ -44,7 +44,7 @@
             android:name=".SignupActivity"
             android:exported="false" /> <!-- Main Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity2"
             android:exported="false" />
     </application>
 

@@ -14,7 +14,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
     TextView mcurrentheight;
     TextView mcurrentweight,mcurrentage;
     ImageView mincrementage,mdecrementage,mincrementweight,mdecrementweight;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 String username = getIntent().getStringExtra("username");
 
                 Log.d("MainActivity", "Username passed to History: " + username);
-                Intent intent = new Intent(MainActivity.this, History.class);
+                Intent intent = new Intent(MainActivity2.this, History.class);
                 intent.putExtra("username", username);
                 startActivity(intent);
 
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         mbmiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                Intent intent = new Intent(MainActivity2.this, MainActivity2.class);
                 startActivity(intent);
             }
         });
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
 
-                    Intent intent = new Intent(MainActivity.this, bmiactivity.class);
+                    Intent intent = new Intent(MainActivity2.this, bmiactivity.class);
                     intent.putExtra("gender", typerofuser);
                     intent.putExtra("height", mintprogress);
                     intent.putExtra("weight", weight2);
