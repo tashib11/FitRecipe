@@ -1,4 +1,4 @@
-t package com.example.fitrecipe;
+ package com.example.fitrecipe;
 
 import static org.junit.Assert.*;
 import org.junit.Before;
