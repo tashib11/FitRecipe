@@ -3,17 +3,16 @@ package com.example.fitrecipe;
 import java.util.Calendar;
 
 public class AgeCalculatorSingleton {
-    // Static variable reference of single_instance of type AgeCalculatorSingleton
     private static AgeCalculatorSingleton single_instance = null;
 
     // Private constructor to restrict instantiation of the class from other classes
     private AgeCalculatorSingleton() {}
 
-    // Static method to create instance of AgeCalculatorSingleton class
-    public static AgeCalculatorSingleton getInstance() {
-        if (single_instance == null)
+    // Thread-safe method to create instance of AgeCalculatorSingleton class
+    public static synchronized AgeCalculatorSingleton getInstance() {
+        if (single_instance == null) {
             single_instance = new AgeCalculatorSingleton();
-
+        }
         return single_instance;
     }
 
@@ -47,16 +46,11 @@ public class AgeCalculatorSingleton {
         // Adjust ageDays and ageMonths if negative
         if (ageDays < 0) {
             ageMonths--;
-            ageDays += daysInMonth(currentMonth - 1, currentYear);
+            ageDays += daysInMonth((currentMonth == 1 ? 12 : currentMonth - 1), currentYear);
         }
         if (ageMonths < 0) {
             ageYears--;
             ageMonths += 12;
-        }
-
-        // Adjust ageMonths if the birthday hasn't occurred yet this year
-        if (currentMonth < month || (currentMonth == month && currentDay < day)) {
-            ageMonths--;
         }
 
         return new String[]{String.valueOf(ageYears), String.valueOf(ageMonths), String.valueOf(ageDays)};
@@ -64,9 +58,10 @@ public class AgeCalculatorSingleton {
 
     // Function to validate the input date
     public boolean isValidDate(int day, int month, int year) {
-        // Add your validation logic here
-        // For example, you can check if the day, month, and year are within valid ranges
-        // This depends on your specific requirements
-        return (day >= 1 && day <= 31) && (month >= 1 && month <= 12) && (year > 0);
+        if (month < 1 || month > 12 || day < 1 || year <= 0) {
+            return false;
+        }
+        int daysInMonth = daysInMonth(month, year);
+        return day <= daysInMonth;
     }
 }

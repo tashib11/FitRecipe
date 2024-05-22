@@ -1,4 +1,4 @@
-package com.example.fitrecipe;
+t package com.example.fitrecipe;
 
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -45,8 +45,8 @@ public class AgeCalculatorSingletonTest {
         assertFalse(ageCalculator.isValidDate(0, 1, 2020));
         assertFalse(ageCalculator.isValidDate(32, 1, 2020));
         assertTrue(ageCalculator.isValidDate(29, 2, 2020));
-//       assertFalse(ageCalculator.isValidDate(30, 2, 2021));
-//        assertFalse(ageCalculator.isValidDate(31, 4, 2021));
+     assertFalse(ageCalculator.isValidDate(30, 2, 2021));
+        assertFalse(ageCalculator.isValidDate(31, 4, 2021));
         assertTrue(ageCalculator.isValidDate(31, 12, 2021));
     }
 }
