@@ -18,9 +18,14 @@
         android:theme="@style/Theme.FitRecipe"
         tools:targetApi="31">
         <activity
+
             android:name=".settings"
             android:exported="false" />
 
+        <activity
+
+            android:name=".RecipeActivity"
+            android:exported="false" />
 
 
 
@@ -46,7 +51,11 @@
         <activity
             android:name=".AgeCalculate" />
         <activity
+            android:name=".MainActivity"/>
+        <activity
             android:name=".LoginActivity"
+
+
 
             android:exported="true">
             <intent-filter>

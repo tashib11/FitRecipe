@@ -53,14 +53,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="BMI" />
+            android:text="Recipies" />
 
-        <Button
-            android:id="@+id/articlesButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Articles" />
+
 
         <Button
             android:id="@+id/historybutton"

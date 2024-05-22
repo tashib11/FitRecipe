@@ -39,7 +39,6 @@ public class MainActivity2 extends AppCompatActivity {
 
         //Toast.makeText(MainActivity.this, username,  Toast.LENGTH_SHORT).show();
 
-        marticlebutton=findViewById(R.id.articlesButton);
         mbmiButton=findViewById(R.id.bmiButton);
         mhistorybutton=findViewById(R.id.historybutton);
         msettingsbutton=findViewById(R.id.settingsbutton);
@@ -79,7 +78,7 @@ public class MainActivity2 extends AppCompatActivity {
         mbmiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity2.this, MainActivity2.class);
+                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
                 startActivity(intent);
             }
         });
