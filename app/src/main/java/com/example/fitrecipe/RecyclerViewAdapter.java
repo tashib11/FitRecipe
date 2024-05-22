@@ -15,46 +15,37 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyHolder> {
-
     private Context mContext;
     private List<Recipes> mData;
 
-    public RecyclerViewAdapter(Context mContext, List<Recipes> mData){
+    public RecyclerViewAdapter(Context mContext, List<Recipes> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
 
-
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-
-        View view ;
-        LayoutInflater layoutInflater = LayoutInflater.from(mContext);
-        view = layoutInflater.inflate(R.layout.cardview_recipe,viewGroup,false);
-        return  new MyHolder(view);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.cardview_recipe, viewGroup, false);
+        return new MyHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MyHolder myHolder,  int i) {
-
+    public void onBindViewHolder(@NonNull final MyHolder myHolder, final int i) {
         myHolder.recipeTitle.setText(mData.get(i).getRecipeName());
         myHolder.img_recipe_thumbnail.setImageResource(mData.get(i).getThumbnail());
         myHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext,RecipeActivity.class);
-
-                intent.putExtra("RecipeName",mData.get(i).getRecipeName());
-                intent.putExtra("RecipeIngredients",mData.get(i).getRecipeIngredients());
-                intent.putExtra("RecipeMethodTitle",mData.get(i).getRecipeMethodTitle());
-                intent.putExtra("Recipe",mData.get(i).getRecipe());
-                intent.putExtra("Thumbnail",mData.get(i).getThumbnail());
-
+                Intent intent = new Intent(mContext, RecipeActivity.class);
+                intent.putExtra("RecipeName", mData.get(i).getRecipeName());
+                intent.putExtra("RecipeIngredients", mData.get(i).getRecipeIngredients());
+                intent.putExtra("RecipeMethodTitle", mData.get(i).getRecipeMethodTitle());
+                intent.putExtra("Recipe", mData.get(i).getRecipe());
+                intent.putExtra("Thumbnail", mData.get(i).getThumbnail());
                 mContext.startActivity(intent);
             }
         });
-
     }
 
     @Override
@@ -63,18 +54,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public class MyHolder extends RecyclerView.ViewHolder {
-
         TextView recipeTitle;
-        CardView  cardView;
+        CardView cardView;
         ImageView img_recipe_thumbnail;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
-
-            recipeTitle = (TextView)itemView.findViewById(R.id.recipe_text);
-            img_recipe_thumbnail = (ImageView)itemView.findViewById(R.id.recipe_img_id);
-            cardView = (CardView)itemView.findViewById(R.id.cardview_id);
-
+            recipeTitle = itemView.findViewById(R.id.recipe_text);
+            img_recipe_thumbnail = itemView.findViewById(R.id.recipe_img_id);
+            cardView = itemView.findViewById(R.id.cardview_id);
         }
     }
 }
