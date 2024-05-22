@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "397169885587",
+    "project_id": "fitrecipe-f630f",
+    "storage_bucket": "fitrecipe-f630f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397169885587:android:17da97f1d558397d94e866",
+        "android_client_info": {
+          "package_name": "com.example.fitrecipe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-x16xqidh3R88cewBbN7ibvVsNf59rGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
