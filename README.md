@@ -36,3 +36,13 @@ FitRecipe is an Android application designed to help users discover and prepare 
    - https://github.com/tashib11
    - https://github.com/tamim2007009
    - https://github.com/Mezba1312
+  
+## Course Instructors
+
+1. Md Nazirulhasan Shawon,
+     Lecturer,
+     Department of Computer Science and Engineering,KUET
+
+2. Argha Chandra Dhar
+     Lecturer,
+     Department of Computer Science and Engineering, KUET
