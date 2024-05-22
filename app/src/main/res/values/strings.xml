@@ -2,8 +2,6 @@
     <string name="app_name">FitRecipe</string>
 
 
-
-
     <string-array name="unit_array">
         <item>Meters</item>
         <item>Inches</item>
@@ -20,5 +18,7 @@
     </string-array>
 
 
+
 </resources>
+
 

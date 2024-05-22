@@ -3,12 +3,17 @@
   <component name="AndroidTestResultsUserPreferences">
     <option name="androidTestResultsTableState">
       <map>
+<<<<<<< HEAD
         <entry key="-2133166406">
+=======
+        <entry key="-1792788107">
+>>>>>>> tashib
           <value>
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
                 <map>
                   <entry key="Duration" value="90" />
+<<<<<<< HEAD
                   <entry key="Pixel_7_Pro_API_24" value="120" />
                   <entry key="Tests" value="360" />
                   <entry key="realme RMX3286" value="120" />
@@ -67,69 +72,114 @@
                   <entry key="Tests" value="360" />
                   <entry key="Xiaomi Mi A3" value="120" />
                   <entry key="realme RMX3286" value="120" />
+=======
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi Mi A3" value="120" />
+>>>>>>> tashib
                 </map>
               </option>
             </AndroidTestResultsTableState>
           </value>
         </entry>
+<<<<<<< HEAD
         <entry key="-101965434">
+=======
+        <entry key="-1374996807">
+>>>>>>> tashib
           <value>
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
                 <map>
                   <entry key="Duration" value="90" />
+<<<<<<< HEAD
                   <entry key="Pixel_7_Pro_API_24" value="120" />
                   <entry key="Tests" value="360" />
+=======
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi Mi A3" value="120" />
+>>>>>>> tashib
                 </map>
               </option>
             </AndroidTestResultsTableState>
           </value>
         </entry>
+<<<<<<< HEAD
         <entry key="303447588">
+=======
+        <entry key="-430381793">
+>>>>>>> tashib
           <value>
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
                 <map>
                   <entry key="Duration" value="90" />
+<<<<<<< HEAD
                   <entry key="Pixel_7_Pro_API_24" value="120" />
                   <entry key="Tests" value="360" />
+=======
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi Mi A3" value="120" />
+>>>>>>> tashib
                 </map>
               </option>
             </AndroidTestResultsTableState>
           </value>
         </entry>
+<<<<<<< HEAD
         <entry key="390422347">
+=======
+        <entry key="1120896594">
+>>>>>>> tashib
           <value>
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
                 <map>
                   <entry key="Duration" value="90" />
+<<<<<<< HEAD
                   <entry key="Pixel_7_Pro_API_24" value="120" />
                   <entry key="Tests" value="360" />
+=======
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi Mi A3" value="120" />
+>>>>>>> tashib
                 </map>
               </option>
             </AndroidTestResultsTableState>
           </value>
         </entry>
+<<<<<<< HEAD
         <entry key="634933885">
+=======
+        <entry key="1606990659">
+>>>>>>> tashib
           <value>
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
                 <map>
                   <entry key="Duration" value="90" />
+<<<<<<< HEAD
                   <entry key="Pixel_7_Pro_API_24" value="120" />
                   <entry key="Tests" value="360" />
+=======
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi Mi A3" value="120" />
+>>>>>>> tashib
                 </map>
               </option>
             </AndroidTestResultsTableState>
           </value>
         </entry>
+<<<<<<< HEAD
         <entry key="686303460">
+=======
+        <entry key="2035951007">
+>>>>>>> tashib
           <value>
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
                 <map>
                   <entry key="Duration" value="90" />
+<<<<<<< HEAD
                   <entry key="Pixel_7_Pro_API_24" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
@@ -171,6 +221,10 @@
                   <entry key="Duration" value="90" />
                   <entry key="Pixel_7_Pro_API_24" value="120" />
                   <entry key="Tests" value="360" />
+=======
+                  <entry key="Tests" value="360" />
+                  <entry key="Xiaomi Mi A3" value="120" />
+>>>>>>> tashib
                 </map>
               </option>
             </AndroidTestResultsTableState>
