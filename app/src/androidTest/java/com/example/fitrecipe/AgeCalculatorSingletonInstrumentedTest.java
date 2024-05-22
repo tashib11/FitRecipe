@@ -1,6 +1,10 @@
 package com.example.fitrecipe;
 
 
+import androidx.test.espresso.Espresso;
+import androidx.test.espresso.action.ViewActions;
+import androidx.test.espresso.assertion.ViewAssertions;
+import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -23,15 +27,22 @@ public class AgeCalculatorSingletonInstrumentedTest {
     public ActivityScenarioRule<AgeCalculate> activityRule = new ActivityScenarioRule<>(AgeCalculate.class);
 
     @Test
-    public void testCalculateAge() {
-        onView(withId(R.id.dayEditText)).perform(replaceText("10"));
-        onView(withId(R.id.monthEditText)).perform(replaceText("5"));
-        onView(withId(R.id.yearEditText)).perform(replaceText("1990"));
+    public void testCalculateAgeButton_withValidInput() {
+        // Enter valid date
+        Espresso.onView(ViewMatchers.withId(R.id.dayEditText)).perform(ViewActions.typeText("1"));
+        Espresso.onView(ViewMatchers.withId(R.id.monthEditText)).perform(ViewActions.typeText("1"));
+        Espresso.onView(ViewMatchers.withId(R.id.yearEditText)).perform(ViewActions.typeText("2000"));
 
-        onView(withId(R.id.calculateButton)).perform(click());
+        // Close the keyboard
+        Espresso.closeSoftKeyboard();
 
-        onView(withId(R.id.ageTextView)).check(matches(withText("Your age is: 34 years, 0 months, and 12 days")));
+        // Click the calculate button
+        Espresso.onView(ViewMatchers.withId(R.id.calculateButton)).perform(ViewActions.click());
+
+        // Check if the age is displayed
+        Espresso.onView(ViewMatchers.withId(R.id.ageTextView)).check(ViewAssertions.matches(ViewMatchers.withText("Your age is: 24 years, 4 months, and 21 days")));
     }
+
 
 
 
