@@ -12,7 +12,86 @@ public class RecipeManager {
     // Private constructor to prevent instantiation
     private RecipeManager() {
         recipesList = new ArrayList<>();
-        // Initialize with some recipes
+
+        recipesList.add(new Recipes(
+                "Berry Chia Pudding",
+                "Ingredients:\n" +
+                        "1/4 cup chia seeds\n" +
+                        "1 cup almond milk\n" +
+                        "1 tbsp maple syrup\n" +
+                        "1/2 tsp vanilla extract\n" +
+                        "1/2 cup mixed berries\n" +
+                        "1 tbsp berry sauce\n" +
+                        "Mint leaves for garnish (optional)",
+                "Method:\n" ,
+                        "1. In a bowl, combine chia seeds, almond milk, maple syrup, and vanilla extract. Stir well to combine.\n" +
+                        "2. Let the mixture sit for about 10 minutes, then stir again to prevent clumping.\n" +
+                        "3. Cover the bowl and refrigerate for at least 2 hours or overnight.\n" +
+                        "4. Once the chia pudding is set, divide it into serving bowls or glasses.\n" +
+                        "5. Top each serving with mixed berries and a drizzle of berry sauce.\n" +
+                        "6. Garnish with mint leaves if desired.\n" +
+                        "7. Serve immediately and enjoy!",
+                R.drawable.salad2
+        ));
+
+
+        recipesList.add(new Recipes(
+                "Colorful Veggie Salad Bowl",
+                "1 cup mixed lettuce\n" +
+                        "1/2 cup cherry tomatoes\n" +
+                        "1/2 yellow bell pepper, sliced\n" +
+                        "1/4 cup shredded red cabbage\n" +
+                        "1/2 cup chickpeas\n" +
+                        "1/2 cup roasted sweet potatoes\n" +
+                        "1/2 avocado, sliced\n" +
+                        "1/4 cup radish slices\n" +
+                        "1/4 cup microgreens\n" +
+                        "2 tbsp ranch dressing",
+                "Method",
+                "1. Arrange the mixed lettuce at the bottom of a large bowl.\n" +
+                        "2. Add cherry tomatoes, yellow bell pepper slices, shredded red cabbage, chickpeas, and roasted sweet potatoes in sections around the bowl.\n" +
+                        "3. Place the avocado slices and radish slices on top of the lettuce.\n" +
+                        "4. Sprinkle microgreens over the top.\n" +
+                        "5. Drizzle ranch dressing over the salad.\n" +
+                        "6. Serve immediately and enjoy!",
+                R.drawable.veggi
+        ));
+
+        recipesList.add(new Recipes(
+                "Yogurt Parfait with Blueberries and Granola",
+                "1 cup plain Greek yogurt\n" +
+                        "1/2 cup granola\n" +
+                        "1/2 cup fresh blueberries\n" +
+                        "1 tbsp honey (optional)\n" +
+                        "1 tsp chia seeds (optional)",
+                "Method",
+                "1. In a glass or bowl, add a layer of Greek yogurt.\n" +
+                        "2. Add a layer of granola on top of the yogurt.\n" +
+                        "3. Add a layer of fresh blueberries.\n" +
+                        "4. Repeat the layers until all ingredients are used, finishing with blueberries and granola on top.\n" +
+                        "5. Drizzle honey on top if desired.\n" +
+                        "6. Sprinkle chia seeds on top for extra nutrition if desired.\n" +
+                        "7. Serve immediately and enjoy!",
+                R.drawable.granola
+        ));
+
+        recipesList.add(new Recipes(
+                "Beef with Rice and Asparagus",
+                "200g beef steak\n" +
+                        "1 cup brown rice\n" +
+                        "5 asparagus spears\n" +
+                        "Salt to taste\n" +
+                        "Pepper to taste\n" +
+                        "1 tsp olive oil",
+                "Method",
+                "1. Cook the brown rice according to package instructions.\n" +
+                        "2. Season the beef steak with salt and pepper.\n" +
+                        "3. Heat olive oil in a pan and cook the steak to your liking.\n" +
+                        "4. Steam or grill the asparagus until tender.\n" +
+                        "5. Serve the beef with rice and asparagus.",
+                R.drawable.asparagus
+        ));
+
 
         recipesList.add(new Recipes("Pasta","1 tsp oil" +
                 "1 tsp butter" +
