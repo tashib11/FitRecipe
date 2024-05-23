@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class bmiactivity extends AppCompatActivity {
 
     TextView mbmidisplay, magedisplay, mweightdisplay, mheightdisplay, mbmicategory, mgender;
-    Button mgotomain, mSaveBmi;
+    Button mgotomain, mSaveBmi, healthButton;
     Intent intent;
 
     ImageView mimageview;
@@ -53,6 +53,7 @@ public class bmiactivity extends AppCompatActivity {
         mimageview = findViewById(R.id.imageview);
         mbackground = findViewById(R.id.contentlayout);
         mSaveBmi = findViewById(R.id.saveBmi);
+        healthButton=findViewById(R.id.healthButton);
 
         height = intent.getStringExtra("height");
         weight = intent.getStringExtra("weight");
@@ -96,7 +97,14 @@ public class bmiactivity extends AppCompatActivity {
             mbackground.setBackgroundColor(R.color.red);
             mimageview.setImageResource(R.drawable.crosss);
         }
-
+        healthButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(bmiactivity.this, HealthActivity.class);
+                intent.putExtra("intbmi", intbmi);
+                startActivity(intent);
+            }
+        });
         mgender = findViewById(R.id.genderdisplay);
         mgender.setText(intent.getStringExtra("gender"));
         mbmidisplay.setText(mbmi);
@@ -117,6 +125,8 @@ public class bmiactivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void saveToFirebase(String username) {
         if (username != null) {

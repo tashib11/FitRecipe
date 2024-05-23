@@ -2,7 +2,6 @@
     <string name="app_name">FitRecipe</string>
 
 
-
     <string-array name="unit_array">
         <item>Meters</item>
         <item>Inches</item>
@@ -17,11 +16,6 @@
         <item>Light Years</item>
         <!-- Add more units as needed -->
     </string-array>
-
-
-
-
-
 
 
     <string name="recipeName">Recipe Name</string>
