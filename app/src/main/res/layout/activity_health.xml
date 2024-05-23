@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/bmi_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="16dp"
+        android:text="As your BMI value is"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/bmi_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bmi_label"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:text="BMI Value"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/defined_text_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suggested Foods:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/bmi_display"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/suggested_food_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suggested Food Items"
+        android:textSize="16sp"
+        android:layout_below="@id/defined_text_field"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:maxLines="3"
+        android:ellipsize="end" />
+
+    <Button
+        android:id="@+id/recipeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/suggested_food_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:background="@color/colorPrimary"
+        android:text="Get Recipes"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
