@@ -5,9 +5,9 @@ on:
 
 
 
-    branches: [tashib]
+    branches: [main]
   push:
-    branches: [tashib]
+    branches: [main]
 
 
 
